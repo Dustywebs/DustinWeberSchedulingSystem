@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="489.0" prefWidth="1184.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MainLayoutController">
+   <children>
+      <Label fx:id="mainTitle" layoutX="48.0" layoutY="33.0" prefHeight="27.0" prefWidth="172.0" text="Global Scheduler" textFill="#3415a4">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <FlowPane layoutX="48.0" layoutY="106.0" prefHeight="275.0" prefWidth="485.0">
+         <children>
+            <HBox prefHeight="40.0" prefWidth="484.0">
+               <children>
+                  <Label fx:id="mainCustomersTableTitle" text="Customers" textFill="#3415a4">
+                     <HBox.margin>
+                        <Insets right="160.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mainFilterLabel" prefHeight="21.0" prefWidth="42.0" text="Filter:">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin></Label>
+                  <TextField fx:id="mainCustomerFilterTextInput" prefHeight="31.0" prefWidth="207.0" promptText="Type here to search">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin></TextField>
+               </children>
+            </HBox>
+            <TableView fx:id="mainCustomersTable" prefHeight="200.0" prefWidth="484.0">
+              <columns>
+                <TableColumn fx:id="mainCustomersTableName" prefWidth="148.0" text="Name" />
+                  <TableColumn fx:id="mainCustomersTablePhone" prefWidth="111.0" text="Phone" />
+                <TableColumn fx:id="mainCustomersTableCity" prefWidth="99.0" text="City" />
+                  <TableColumn fx:id="mainCustomersTableCountry" prefWidth="123.0" text="Country" />
+              </columns>
+            </TableView>
+            <HBox prefHeight="40.0" prefWidth="471.0">
+               <children>
+                  <Button fx:id="mainCustomersTableAddButton" mnemonicParsing="false" onAction="#handleButtonAddCustomer" text="Add Customer">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin></Button>
+                  <Button fx:id="mainCustomersTableModifyButton" mnemonicParsing="false" onAction="#handleButtonModifyCustomer" text="Modify Customer">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin></Button>
+                  <Button fx:id="mainCustomersScheduleAppointmentButton" mnemonicParsing="false" text="Schedule Appointment" />
+               </children>
+               <FlowPane.margin>
+                  <Insets top="5.0" />
+               </FlowPane.margin>
+            </HBox>
+         </children>
+      </FlowPane>
+      <Label fx:id="mainTimeLabel" alignment="CENTER_RIGHT" layoutX="746.0" layoutY="36.0" prefHeight="21.0" prefWidth="409.0" text="Time / Timezone" textAlignment="RIGHT" />
+      <FlowPane layoutX="590.0" layoutY="104.0" prefHeight="275.0" prefWidth="565.0">
+         <children>
+            <HBox prefHeight="40.0" prefWidth="563.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="122.0" text="Appointments" textFill="#3415a4">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="60.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label prefHeight="21.0" prefWidth="114.0" text="Filter table by: ">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin></Label>
+                  <Button fx:id="mainAppointmentsTableAllButton" mnemonicParsing="false" onAction="#handleFilterAppointments" prefHeight="31.0" prefWidth="59.0" text="All">
+                     <HBox.margin>
+                        <Insets right="10.0" top="5.0" />
+                     </HBox.margin></Button>
+                  <Button fx:id="mainAppointmentsTable30DayButton" mnemonicParsing="false" onAction="#handleFilterAppointments" text="30 days">
+                     <HBox.margin>
+                        <Insets right="10.0" top="5.0" />
+                     </HBox.margin></Button>
+                  <Button fx:id="mainAppointmentsTable7DayButton" mnemonicParsing="false" onAction="#handleFilterAppointments" text="7 days">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin></Button>
+               </children>
+            </HBox>
+            <TableView fx:id="mainAppointmentsTable" prefHeight="200.0" prefWidth="563.0">
+              <columns>
+                <TableColumn fx:id="mainAppointmentsTableTitle" prefWidth="134.0" text="Title" />
+                  <TableColumn fx:id="mainAppointmentsTableLocation" prefWidth="124.0" text="Location" />
+                  <TableColumn fx:id="mainAppointmentsTableStart" prefWidth="153.0" text="Start" />
+                  <TableColumn fx:id="mainAppointmentsTableEnd" prefWidth="149.0" text="End" />
+              </columns>
+            </TableView>
+            <HBox prefHeight="37.0" prefWidth="486.0">
+               <children>
+                  <Button fx:id="mainCustomersModifyAppointmentButton" mnemonicParsing="false" text="Modify Appointment">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin></Button>
+                  <Button fx:id="mainCustomersDeleteAppointmentButton" mnemonicParsing="false" text="Delete Appointment" />
+               </children>
+               <FlowPane.margin>
+                  <Insets top="5.0" />
+               </FlowPane.margin></HBox>
+         </children>
+      </FlowPane>
+      <Button fx:id="mainLayoutExitButton" layoutX="1084.0" layoutY="429.0" mnemonicParsing="false" onAction="#handleButtonExitApplication" prefHeight="31.0" prefWidth="71.0" text="Exit" />
+      <Button fx:id="mainLayoutReportingButton" layoutX="48.0" layoutY="420.0" mnemonicParsing="false" onAction="#handleButtonReporting" prefHeight="40.0" prefWidth="246.0" text="Launch Reporting Functionality" textAlignment="CENTER" wrapText="true" />
+   </children>
+</AnchorPane>

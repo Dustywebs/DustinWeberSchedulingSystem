@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="389.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AppointmentLayoutController">
+   <children>
+      <Label fx:id="scheduleAppointmentTitle" layoutX="14.0" layoutY="33.0" prefHeight="21.0" prefWidth="173.0" text="Schedule Appointment" textFill="#3415a4">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <GridPane layoutX="59.0" layoutY="71.0" prefHeight="409.0" prefWidth="271.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="177.0" minWidth="10.0" prefWidth="96.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="257.0" minWidth="10.0" prefWidth="175.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="scheduleAppointmentCustomerLabel" text="Customer" />
+            <Label fx:id="scheduleAppointmentCustomerValueDisplay" text="Customer Name" GridPane.columnIndex="1" />
+            <Label fx:id="scheduleAppointmentTitleLabel" text="Title" GridPane.rowIndex="1" />
+            <Label fx:id="scheduleAppointmentDescriptionLabel" text="Description" GridPane.rowIndex="2" />
+            <Label fx:id="scheduleAppointmentLocationLabel" text="Location" GridPane.rowIndex="3" />
+            <Label fx:id="scheduleAppointmentContactLabel" text="Contact" GridPane.rowIndex="4" />
+            <Label fx:id="scheduleAppointmentStartDateLabel" text="Start Date" GridPane.rowIndex="5" />
+            <Label fx:id="scheduleAppointmentEndTimeLabel" text="Start Time" GridPane.rowIndex="6" />
+            <Label fx:id="scheduleAppointmentEndDateLabel" text="End Date" GridPane.rowIndex="7" />
+            <Label fx:id="scheduleAppointmentEndTimeLabel" text="End Time" GridPane.rowIndex="8" />
+            <TextField fx:id="scheduleAppointmentTitleInput" promptText="Appointment Title" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="scheduleAppointmentDescriptionInput" promptText="EX: Proposal" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="scheduleAppointmentLocationInput" promptText="Please enter location" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="scheduleAppointmentContactInput" promptText="Contact Details" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <DatePicker fx:id="scheduleAppointmentStartDateSelector" promptText="Select Date" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="scheduleAppointmentStartTimeInput" promptText="Ex: 14:00" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <DatePicker fx:id="scheduleAppointmentEndDateSelector" promptText="Select Date" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="scheduleAppointmentEndTimeInput" promptText="Ex: 13:30" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+         </children>
+      </GridPane>
+      <HBox layoutX="123.0" layoutY="487.0" prefHeight="39.0" prefWidth="144.0">
+         <children>
+            <Button fx:id="appointmentAddButton" mnemonicParsing="false" text="Create">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin></Button>
+            <Button fx:id="appointmentExitButton" mnemonicParsing="false" text="Cancel" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

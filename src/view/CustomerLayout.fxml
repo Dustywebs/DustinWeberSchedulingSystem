@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="588.0" prefWidth="478.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.CustomerLayoutController">
+   <children>
+      <Label fx:id="customerLayoutTitle" layoutX="48.0" layoutY="33.0" prefHeight="21.0" prefWidth="169.0" text="Create New Customer" textFill="#3415a4">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <GridPane layoutX="121.0" layoutY="54.0" prefHeight="481.0" prefWidth="293.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="188.0" minWidth="10.0" prefWidth="122.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="171.0" minWidth="10.0" prefWidth="171.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="customerLayoutCustomerNameLabel" text="Customer Name" />
+            <Label fx:id="customerLayoutAddress1Label" text="Address 1" GridPane.rowIndex="1" />
+            <Label fx:id="customerLayoutAddress2Label" text="Address 2" GridPane.rowIndex="2" />
+            <Label fx:id="customerLayoutCityLabel" text="City" GridPane.rowIndex="3" />
+            <Label fx:id="customerLayoutZipLabel" text="Zip" GridPane.rowIndex="4" />
+            <Label fx:id="customerLayoutCountryLabel" text="Country" GridPane.rowIndex="5" />
+            <Label fx:id="customerLayoutPhoneLabel" text="Phone" GridPane.rowIndex="6" />
+            <Label fx:id="customerLayoutActiveLabel" text="Active User?" GridPane.rowIndex="7" />
+            <TextField fx:id="customerLayoutCustomerNameInput" promptText="First and Last" GridPane.columnIndex="1" />
+            <TextField fx:id="customerLayoutAddress1Input" promptText="Num and Street" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="customerLayoutAddress2Input" promptText="ex: APT 5" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="customerLayoutCityInput" promptText="City" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="customerLayoutZipInput" promptText="ex: 22025" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="customerLayoutCountryInput" promptText="Country" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="customerLayoutPhoneInput" promptText="(123) 456-9865" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <CheckBox fx:id="customerLayoutActiveCheckbox" mnemonicParsing="false" prefHeight="21.0" prefWidth="37.0" selected="true" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+         </children>
+      </GridPane>
+      <HBox layoutX="160.0" layoutY="535.0" prefHeight="38.0" prefWidth="215.0">
+         <children>
+            <Button fx:id="customerLayoutSaveButton" mnemonicParsing="false" onAction="#addCustomer" text="Create Customer">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin></Button>
+            <Button fx:id="customerLayoutCancelButton" mnemonicParsing="false" onAction="#handleButtonCancel" text="Cancel" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
